@@ -29,12 +29,21 @@ module.exports = function(grunt){
                 ],
                 "dest": "server/public/vendors/"
             },
+            angularRoute: {
+                expand: true,
+                cwd: 'node_modules/angular-route',
+                src: [
+                    "angular-route.min.js",
+                    "angular-route.min.js.map"
+                ],
+                "dest": "server/public/vendors/"
+            },
             html: {
                 expand: true,
                 cwd: 'client/views/',
                 src: [
-                    "*.html"
-
+                    "*",
+                    "*/*"
                 ],
                 "dest": "server/public/assets/views/"
             },
