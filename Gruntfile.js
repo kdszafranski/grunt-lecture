@@ -5,11 +5,14 @@ module.exports = function(grunt){
             options: {
                 banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
             },
-            build: {
+            app: {
                 src: 'client/scripts/*.js',
                 dest: 'server/public/assets/scripts/app.min.js'
+            },
+            controllers: {
+                src: 'client/scripts/controllers/*.js',
+                dest: 'server/public/assets/scripts/controllers.min.js'
             }
-
         },
         copy: {
             bootstrap: {

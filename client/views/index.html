@@ -2,7 +2,7 @@
 <html ng-app="myApp">
 <head lang="en">
     <meta charset="UTF-8">
-    <title></title>
+    <title>Angular Includes</title>
 
     <!--STYLES-->
     <link rel="stylesheet" href="/vendors/bootstrap.min.css">
@@ -12,10 +12,15 @@
     <script type="text/javascript" src="/vendors/angular.min.js"></script>
     <script type="text/javascript" src="/vendors/angular-route.min.js"></script>
     <script type="text/javascript" src="/assets/scripts/app.min.js"></script>
+    <script type="text/javascript" src="/assets/scripts/controllers.min.js"></script>
 </head>
 <body>
-    <h1>Routing!</h1>
+
+    <header class="jumbotron" ng-include="'assets/views/templates/header.html'"></header>
+    <!--<ng-include src="'assets/views/templates/header.html'"></ng-include>-->
+
     <main ng-view></main>
-    <footer>I'm the Footer!</footer>
+
+    <footer ng-include="'assets/views/templates/footer.html'"></footer>
 </body>
 </html>
