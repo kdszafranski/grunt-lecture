@@ -1,7 +1,7 @@
 var myApp = angular.module('myApp', ['ngRoute']);
 
 // ngRoute is a package
-// routeProvider is the service we're using proviced by ngRoute
+// routeProvider is the service we're using provided by ngRoute
 myApp.config(['$routeProvider', function($routeProvider) {
     $routeProvider.
         when('/home', {

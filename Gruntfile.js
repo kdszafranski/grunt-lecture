@@ -1,23 +1,30 @@
-module.exports = function(grunt){
+module.exports = function(grunt) {
+    // configure the grunt object
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
+        // aka Minification
         uglify: {
             options: {
+                // Adds a comment line at the top of the generated minified file
                 banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
             },
             app: {
                 src: 'client/scripts/*.js',
                 dest: 'server/public/assets/scripts/app.min.js'
             },
+            // Combining source files into one destination files
+            // Cannot guarantee order
             controllers: {
+                // * is a wildcard for everything. Here, all JavaScript files.
                 src: 'client/scripts/controllers/*.js',
                 dest: 'server/public/assets/scripts/controllers.min.js'
             }
         },
+        // Copy files around for deployment
         copy: {
             bootstrap: {
                 expand: true,
-                cwd: 'node_modules/bootstrap/dist/css/',
+                cwd: 'node_modules/bootstrap/dist/css/', // "current working directory"
                 src: [
                     "bootstrap.min.css"
                 ],
@@ -44,6 +51,7 @@ module.exports = function(grunt){
             html: {
                 expand: true,
                 cwd: 'client/views/',
+                // More wildcard usage. The second is to include sub-folders within cwd
                 src: [
                     "*",
                     "*/*"
