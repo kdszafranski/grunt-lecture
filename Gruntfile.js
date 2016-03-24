@@ -69,8 +69,10 @@ module.exports = function(grunt) {
         }
     });
 
+    // Specify the plugins used (notice the NPM reference)
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-uglify');
 
+    // Set which tasks to run when we run 'grunt'
     grunt.registerTask('default', ['copy', 'uglify']);
 };
