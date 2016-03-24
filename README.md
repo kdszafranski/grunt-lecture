@@ -1,2 +1,10 @@
 # Grunt Basics
-Don't forget to run 'npm install' in your console.
+Basic Angular app with routing and controllers to demonstrate basic Grunt usage.
+
+### Required Grunt NPM Modules
+
+* grunt
+* grunt-contrib-copy
+* grunt-contrib-uglify
+
+These are already in the ```package.json``` file. Run 'npm install' in your console to install them.
