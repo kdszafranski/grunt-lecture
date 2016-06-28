@@ -26,7 +26,8 @@ module.exports = function(grunt) {
                 expand: true,
                 cwd: 'node_modules/bootstrap/dist/css/', // "current working directory"
                 src: [
-                    "bootstrap.min.css"
+                    "bootstrap.min.css",
+                    "bootstrap.min.css.map"
                 ],
                 "dest": "server/public/vendors/"
             },
